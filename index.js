@@ -4,6 +4,11 @@
  * @license MIT
  **/
 
+
+
+console.log("sssssssssss",__dirname);
+
+
 var fs = require('fs'),
     path = require('path'),
     Promise = require('bluebird'),
@@ -47,8 +52,13 @@ function resolveOptions(options) {
  * Run Spectacle and configured tasks
  **/
 module.exports = function (options) {
+
+    options.developmentModeLive = true;
+    options.developmentMode = true;
+
     var opts = resolveOptions(options)
 
+    //console.log("opts",JSON.stringify(options))
     //
     //= Load the specification and init configuration
 

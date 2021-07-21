@@ -26,6 +26,7 @@
       {{#if description}}
         <dd>
           {{md description}}
+          <small>{{md notes stripParagraph=true   }}</small>
           {{!-- Show details of nested property schema
           <div class="json-inner-schema">
             {{>json-schema/body $ref="" description=""}}

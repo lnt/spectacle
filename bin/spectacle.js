@@ -5,6 +5,8 @@ var program = require('commander'),
     spectacle = require('../index.js')
 
 //
+
+console.log("opts",JSON.stringify(process.argv))
 //= Process CLI input
 
 program.version(package.version)
@@ -32,6 +34,7 @@ program.version(package.version)
 if (program.args.length < 1) { // && program.rawArgs.length < 1
     program.help()
 }
+
 
 program.specFile = program.args[0]; // || path.resolve(root, 'test/fixtures/cheese.json')
 
